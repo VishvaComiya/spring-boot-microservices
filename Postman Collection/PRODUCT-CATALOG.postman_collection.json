@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "78203060-4483-49a2-93dc-1fd455344ba4",
+		"name": "PRODUCT-CATALOG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3466238"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/createProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYWhpbmRhIiwiaWF0IjoxNzA2NDUwMDc1LCJleHAiOjE3MDY1MzY0NzV9.fAwQHNH4Q_LQiZDC7b_IXXfBEbeOdPZBUxppT2xURsA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"prodName\": \"Toys\",\r\n  \"prodDescription\": \"Childrens Toys\",\r\n  \"addedBy\": \"Malindu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/createProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/getProductList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTYW5qZWV3YSIsImlhdCI6MTcwNjUzNTU3MCwiZXhwIjoxNzA2NjIxOTcwfQ.sOPPEaOyrxckCo9ztZy8qQ9B8wB2_wjXcNrelOSWNPw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"prodId\": 1,\r\n        \"prodName\": \"ABC\",\r\n        \"prodDescription\": \"ABC Product\",\r\n        \"addedBy\": \"Vishva\",\r\n        \"addedDate\": \"2024-01-28T13:50:13.000+00:00\",\r\n        \"modifyBy\": null,\r\n        \"modifyDate\": null,\r\n        \"responseCode\": 0,\r\n        \"responseMessage\": null\r\n    },\r\n    {\r\n        \"prodId\": 3,\r\n        \"prodName\": \"Toys\",\r\n        \"prodDescription\": \"Childrens Toys\",\r\n        \"addedBy\": \"Malindu\",\r\n        \"addedDate\": \"2024-01-28T16:07:28.000+00:00\",\r\n        \"modifyBy\": null,\r\n        \"modifyDate\": null,\r\n        \"responseCode\": 0,\r\n        \"responseMessage\": null\r\n    },\r\n    {\r\n        \"prodId\": 2,\r\n        \"prodName\": \"ABCD\",\r\n        \"prodDescription\": \"ABCD Product\",\r\n        \"addedBy\": \"Vishva\",\r\n        \"addedDate\": \"2024-01-28T13:55:00.000+00:00\",\r\n        \"modifyBy\": null,\r\n        \"modifyDate\": null,\r\n        \"responseCode\": 0,\r\n        \"responseMessage\": null\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/getProductList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getProductList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/findProductById/4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGcssssiOiJIUzI1NiJ9.eyJzdWIiOiJNYWhpbmRhIiwiaWF0IjoxNzA2NDUwMDc1LCJleHAiOjE3MDY1MzY0NzV9.fAwQHNH4Q_LQiZDC7b_IXXfBEbeOdPZBUxppT2xURsA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timestamp\": \"2024-01-28T16:12:53.421+00:00\",\r\n    \"path\": \"/findProductById/4\",\r\n    \"status\": 500,\r\n    \"error\": \"Internal Server Error\",\r\n    \"message\": \"\",\r\n    \"requestId\": \"9f978267-11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/findProductById/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"findProductById",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
